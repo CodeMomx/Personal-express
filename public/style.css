@@ -1,0 +1,51 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html{
+  text-align: center;
+  list-style: none;
+  background-color: #525252;
+}
+
+h1{
+  font-size: 400%;
+  font-family: 'Libre Barcode 39 Text', cursive;
+}
+
+ul{
+  list-style: none;
+}
+
+
+
+
+
+.cross{
+  text-decoration: line-through;
+  color: red;
+}
+
+#toDoList{
+    background:white;
+  border-radius: 5px;
+  padding:1%;
+  height: 460px;
+  margin-top:6%;
+  overflow: scroll;
+  box-shadow: 0 10px 20px white;
+  width:35%;
+  margin-left:auto;
+  margin-right:auto;
+}
+img {
+  float: left;
+}

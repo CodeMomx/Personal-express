@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+			<script src="https://kit.fontawesome.com/e6755d1f3b.js" crossorigin="anonymous"></script>
+
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aleo:wght@300&family=Babylonica&family=Beau+Rivage&family=Berkshire+Swash&family=Cinzel+Decorative&family=Dancing+Script&family=Fjalla+One&family=Fredericka+the+Great&family=Frijole&family=Kristi&family=Londrina+Outline&family=Merriweather:wght@300&family=Monoton&family=Mrs+Sheppards&family=Noto+Serif+Display&family=Open+Sans:wght@300&family=Permanent+Marker&family=Pinyon+Script&family=Pompiere&family=Red+Rose:wght@300&family=Roboto:ital@1&family=Satisfy&family=Sigmar+One&family=Smooch&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aleo:wght@300&family=Babylonica&family=Beau+Rivage&family=Berkshire+Swash&family=Cinzel+Decorative&family=Dancing+Script&family=Fjalla+One&family=Fredericka+the+Great&family=Frijole&family=Kristi&family=Libre+Barcode+39&family=Libre+Barcode+39+Text&family=Londrina+Outline&family=Merriweather:wght@300&family=Monoton&family=Mrs+Sheppards&family=Noto+Serif+Display&family=Open+Sans:wght@300&family=Permanent+Marker&family=Pinyon+Script&family=Pompiere&family=Red+Rose:wght@300&family=Roboto:ital@1&family=Satisfy&family=Sigmar+One&family=Smooch&display=swap" rel="stylesheet">
+		<title>Grocery Shopping List</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Mobile Grocery List</h1>
+			<div>
+				<img src="/GR.gif">
+			</div>
+		<form method="POST" action="/addList">
+			<section class="right">
+			<input id="toDoInput" name="task" type ="text">
+			<button id="submitBtn" type="submit">Add</button>
+		</form>
+
+		<ul id="toDoList">
+			<%for(let i = 0; i<messages.length;i++){ %>
+				<li>
+					<span><%=messages[i].task%></span>
+					<button class="deleteTask"><i class="deleteTask fa-regular fa-trash-can"></i></button>
+					<button class="crossOut"><i class="fa-regular fa-square-check"></i></button>
+				</li>
+		<%	} %> 
+		
+		</ul>
+		<button id="clearList">Clear List</button>
+		</section>
+
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
